@@ -10,6 +10,9 @@ import ProviderC from './components/ProviderC'
 import Portal from './components/Portal'
 import HttpRequest from './components/HttpRequest'
 import Styles from './components/styles'
+import Redux from './components/Redux'
+import RoutingCom from './components/RoutingCom'
+import { BrowserRouter , Switch , Route , Link } from 'react-router-dom'
 class App extends Component {
  constructor() {
    super()
@@ -38,7 +41,12 @@ class App extends Component {
        {/* <ProviderC></ProviderC> */}
        {/* <Portal></Portal> */}
        {/* <HttpRequest></HttpRequest> */}
-       <Styles></Styles>
+       {/* <Styles></Styles> */}
+       {/* <Redux></Redux> */}
+         <BrowserRouter>
+              <Route path="/route1" component={RoutingCom}></Route>
+               <Route path="/route2" component={Condition}></Route>
+         </BrowserRouter>
      </div>
    )
  }
